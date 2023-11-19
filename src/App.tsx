@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 
 import { invoke } from "@tauri-apps/api/tauri";
+
+import { register } from "@tauri-apps/api/globalShortcut";
 
 function App() {
   const [recording, setRecording] = React.useState(false);
@@ -29,6 +31,10 @@ function App() {
     });
     setRecording(false);
   };
+
+  useEffect(() => {
+    register("CommandOrControl+Shift+`", startRecording);
+  }, []);
 
   return (
     <div className="content">

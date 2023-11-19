@@ -23,6 +23,8 @@ repng = "0.2.2"
 chrono = "0.4.23"
 screenshots = "0.5.2"
 core-graphics = "0.22.3"
+uuid = "1.5.0"
+maplit = "1.0.2"
 
 [features]
 # by default Tauri runs in production mode
@@ -31,3 +33,4 @@ default = [ "custom-protocol" ]
 # this feature is used used for production builds where `devPath` points to the filesystem
 # DO NOT remove this
 custom-protocol = [ "tauri/custom-protocol" ]
+
